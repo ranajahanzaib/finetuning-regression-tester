@@ -1,0 +1,17 @@
+model:
+  id: mlx-community/Qwen2.5-1.5B-Instruct-4bit
+  quantization: 4-bit MLX checkpoint
+training:
+  iterations: 20
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  learning_rate: 0.00001
+  num_layers: 2
+  max_sequence_length: 512
+  mask_prompt: true
+  seed: 42
+  smoke_iterations: 2
+decoding:
+  temperature: 0
+  max_tokens: 128
+  seed: 42
