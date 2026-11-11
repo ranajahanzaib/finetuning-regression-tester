@@ -562,7 +562,9 @@ def demo(output: Path = typer.Option(Path("demo-results"), "--output")) -> None:
     typer.echo(
         f"Created explicitly fictional DEMO DATA under {output}; nothing was trained or evaluated."
     )
-    typer.echo(f"Launch with: finetuning-regression-tester dashboard --comparison {output / 'comparison.json'} --demo")
+    typer.echo(
+        f"Launch with: finetuning-regression-tester dashboard --comparison {output / 'comparison.json'} --demo"
+    )
 
 
 @app.command()
@@ -663,7 +665,9 @@ def run(
         comp["model"] = cfg.model.model_dump()
         comp["resolved_model_revision"] = baseline_runner.resolved_revision
         comp["environment"] = {
-            "finetuning_regression_tester_version": manifest["finetuning_regression_tester_version"],
+            "finetuning_regression_tester_version": manifest[
+                "finetuning_regression_tester_version"
+            ],
             "python": manifest["python"],
             "os": manifest["os"],
             "mlx_lm_version": manifest["mlx_lm_version"],
