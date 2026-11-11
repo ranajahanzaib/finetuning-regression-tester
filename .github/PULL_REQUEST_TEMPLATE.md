@@ -1,9 +1,7 @@
-Fixes #<issue_number_goes_here>
-
-> It's a good idea to open an issue first for discussion.
+Related issue: <!-- optional -->
 
 **Description**
-A brief summary of what this PR does and why.
+Describe what changed and why.
 
 - [ ] Tests pass
 - [ ] README updated if needed

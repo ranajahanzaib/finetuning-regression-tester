@@ -59,9 +59,11 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-[INSERT CONTACT METHOD].
-All complaints will be reviewed and investigated promptly and fairly.
+reported through [GitHub Discussions](https://github.com/ranajahanzaib/finetuning-regression-tester/discussions).
+Discussions may be public; do not post sensitive personal information there.
+For confidential reports, email [work@withrana.com](mailto:work@withrana.com).
+Reports will be reviewed fairly, and information will be shared only as needed
+to address the report.
 
 All community leaders are obligated to respect the privacy and security of the
 reporter of any incident.
