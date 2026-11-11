@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finetuning-regression-tester"
+version = "0.1.0"
+description = "Paired behavioral regression analysis for locally fine-tuned language models"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Rana Jahanzaib" }]
+dependencies = ["typer>=0.12,<1", "pydantic>=2.7,<3", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+mlx = ["mlx-lm[train]>=0.21"]
+models = ["huggingface-hub>=0.23"]
+dashboard = ["streamlit>=1.38", "plotly>=5.24"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+finetuning-regression-tester = "finetuning_regression_tester.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finetuning_regression_tester"]
+
+[tool.hatch.build.targets.sdist]
+exclude = ["/PLAN.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
